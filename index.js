@@ -4,6 +4,7 @@ const { isPackageInstalled } = require('./isPackageInstalled');
 
 const config = {
   extends: ['fatfisz'],
+  ignorePatterns: [],
   overrides: [],
   rules: {
     'no-unused-vars': 'warn',
@@ -46,6 +47,14 @@ if (isPackageInstalled('typescript')) {
   Object.assign(config.rules, {
     '@typescript-eslint/no-empty-interface': 'off',
     '@typescript-eslint/no-var-requires': 'warn',
+  });
+}
+
+if (isPackageInstalled('next')) {
+  config.ignorePatterns.push('out');
+
+  Object.assign(config.rules, {
+    'no-unused-vars': 'off',
   });
 }
 
