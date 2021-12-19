@@ -4,7 +4,7 @@ const { isPackageInstalled } = require('./isPackageInstalled');
 
 const config = {
   extends: ['fatfisz'],
-  ignorePatterns: [],
+  ignorePatterns: ['build', 'dist'],
   overrides: [],
   rules: {
     'no-unused-vars': 'warn',
