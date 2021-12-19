@@ -11,7 +11,8 @@
     "eslintconfig"
   ],
   "scripts": {
-    "lint": "eslint . --max-warnings 0"
+    "lint": "eslint . --max-warnings 0",
+    "publish": "npm publish"
   },
   "dependencies": {
     "eslint-config-fatfisz": "3.4.1"
