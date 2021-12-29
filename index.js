@@ -6,7 +6,9 @@ const config = {
   extends: ['fatfisz', 'plugin:json/recommended'],
   ignorePatterns: ['build', 'dist'],
   overrides: [],
+  plugins: ['simple-import-sort'],
   rules: {
+    'import/order': 'off',
     'no-unused-vars': 'warn',
     'prettier/prettier': [
       'warn',
@@ -18,6 +20,9 @@ const config = {
         trailingComma: 'all',
       },
     ],
+    'simple-import-sort/exports': 'warn',
+    'simple-import-sort/imports': 'warn',
+    'sort-imports': 'off',
   },
 };
 
