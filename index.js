@@ -3,7 +3,7 @@
 const { isPackageInstalled } = require('./isPackageInstalled');
 
 const config = {
-  extends: ['fatfisz'],
+  extends: ['fatfisz', 'plugin:json/recommended'],
   ignorePatterns: ['build', 'dist'],
   overrides: [],
   rules: {
