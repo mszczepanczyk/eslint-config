@@ -1,6 +1,6 @@
 {
   "name": "@mariusz.sh/eslint-config",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "main": "index.js",
   "homepage": "https://github.com/mszczepanczyk/eslint-config",
   "repository": "https://github.com/mszczepanczyk/eslint-config.git",
@@ -15,12 +15,12 @@
     "publish": "npm publish"
   },
   "dependencies": {
-    "eslint-config-fatfisz": "3.4.1"
+    "eslint-config-fatfisz": "4.0.1"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "5",
     "@typescript-eslint/parser": "5",
-    "eslint": "7",
+    "eslint": "8",
     "eslint-plugin-react": "7",
     "eslint-plugin-react-hooks": "4",
     "typescript": "4"
