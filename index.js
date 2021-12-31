@@ -3,12 +3,13 @@
 const { isPackageInstalled } = require('./isPackageInstalled');
 
 const config = {
-  extends: ['fatfisz', 'plugin:json/recommended'],
+  extends: ['fatfisz'],
   ignorePatterns: ['build', 'dist'],
   overrides: [],
-  plugins: ['simple-import-sort'],
+  plugins: ['json', 'simple-import-sort'],
   rules: {
     'import/order': 'off',
+    'json/*': ['warn', { allowComments: true }],
     'no-unused-vars': 'warn',
     'prettier/prettier': [
       'warn',
