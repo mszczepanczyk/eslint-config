@@ -28,13 +28,6 @@ const config = {
 };
 
 if (isPackageInstalled('react')) {
-  config.overrides.push({
-    files: '*.stories.*',
-    rules: {
-      'import/no-default-export': 'off',
-    },
-  });
-
   Object.assign(config.rules, {
     'jsx-quotes': ['warn', 'prefer-single'],
     'react/display-name': 'warn',
@@ -63,6 +56,21 @@ if (isPackageInstalled('next')) {
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
   });
+}
+
+if (isPackageInstalled('@storybook/core')) {
+  config.overrides.push(
+    {
+      files: '*.stories.*',
+      rules: {
+        'import/no-default-export': 'off',
+      },
+    },
+    {
+      files: '*.mdx',
+      extends: 'plugin:mdx/overrides',
+    },
+  );
 }
 
 module.exports = config;
