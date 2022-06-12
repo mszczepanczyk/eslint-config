@@ -73,4 +73,11 @@ if (isPackageInstalled('@storybook/core')) {
   );
 }
 
+if (isPackageInstalled('craco')) {
+  config.overrides.push({
+    files: ['craco.config.ts', 'craco.config.js', '.cracorc.ts', '.cracorc.js', '.cracorc'],
+    env: { node: true },
+  });
+}
+
 module.exports = config;
