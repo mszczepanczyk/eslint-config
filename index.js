@@ -73,7 +73,7 @@ if (isPackageInstalled('@storybook/core')) {
   );
 }
 
-if (isPackageInstalled('craco')) {
+if (isPackageInstalled('@craco/craco')) {
   config.overrides.push({
     files: ['craco.config.ts', 'craco.config.js', '.cracorc.ts', '.cracorc.js', '.cracorc'],
     env: { node: true },
