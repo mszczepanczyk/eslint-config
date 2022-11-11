@@ -32,7 +32,7 @@ const config = {
   ignorePatterns: ['build', 'coverage', 'dist', 'out'],
   overrides: [
     {
-      files: ['.eslintrc.js', 'babel.config.js', 'metro.config.js'],
+      files: ['.eslintrc.js', 'babel.config.js', 'metro.config.js', 'webpack.config.js'],
       env: { node: true },
     },
     {
