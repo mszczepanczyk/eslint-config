@@ -5,19 +5,9 @@ Heavily based on [eslint-config-fatfisz](https://www.npmjs.com/package/eslint-co
 ## Installation
 
 ```shell
-yarn add -ED @mariusz.sh/eslint-config eslint-config-prettier eslint-plugin-import eslint-plugin-prettier prettier
-```
-
-With TypeScript:
-
-```shell
-yarn add -ED @typescript-eslint/eslint-plugin @typescript-eslint/parser typescript
-```
-
-With React:
-
-```shell
-yarn add -ED eslint-plugin-react eslint-plugin-react-hooks
+yarn add -D @mariusz.sh/eslint-config eslint-config-prettier eslint-plugin-import eslint-plugin-prettier prettier
+yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser typescript
+yarn add -D eslint-plugin-react eslint-plugin-react-hooks
 ```
 
 Then in `.eslintrc.js`:
@@ -28,6 +18,9 @@ Then in `.eslintrc.js`:
 module.exports = {
   root: true,
   extends: '@mariusz.sh/eslint-config',
+  rules: {
+    // ...
+  },
   // ...
 };
 ```

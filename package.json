@@ -1,6 +1,6 @@
 {
   "name": "@mariusz.sh/eslint-config",
-  "version": "2.1.6",
+  "version": "2.1.7",
   "main": "index.js",
   "homepage": "https://github.com/mszczepanczyk/eslint-config",
   "repository": "https://github.com/mszczepanczyk/eslint-config.git",
@@ -15,17 +15,20 @@
     "publish": "npm publish"
   },
   "dependencies": {
-    "eslint-config-fatfisz": "4.0.1",
     "eslint-plugin-json": "3.1.0",
     "eslint-plugin-mdx": "2.0.4",
     "eslint-plugin-simple-import-sort": "8.0.0"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "5",
-    "@typescript-eslint/parser": "5",
-    "eslint": "8",
-    "eslint-plugin-react": "7",
-    "eslint-plugin-react-hooks": "4",
-    "typescript": "4"
+    "@typescript-eslint/eslint-plugin": "5.42.1",
+    "@typescript-eslint/parser": "5.42.1",
+    "eslint": "8.27.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-react": "7.31.10",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "prettier": "2.7.1",
+    "typescript": "4.8.4"
   }
 }

@@ -1,6 +1,6 @@
 'use strict';
 
-// https://github.com/fatfisz/eslint-config-fatfisz/blob/master/isPackageInstalled.js
+// https://github.com/fatfisz/eslint-config-fatfisz/blob/main/src/isPackageInstalled.ts
 
 exports.isPackageInstalled = function isPackageInstalled(name) {
   try {
