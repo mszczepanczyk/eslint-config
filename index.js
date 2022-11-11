@@ -32,7 +32,7 @@ const config = {
   ignorePatterns: ['build', 'coverage', 'dist', 'out'],
   overrides: [
     {
-      files: '.eslintrc.js',
+      files: ['.eslintrc.js', 'babel.config.js', 'metro.config.js'],
       env: { node: true },
     },
     {
@@ -221,6 +221,7 @@ const config = {
     ],
     'simple-import-sort/exports': 'warn',
     'simple-import-sort/imports': 'warn',
+    // 'sort-keys': 'warn', https://www.npmjs.com/package/eslint-plugin-sort-keys-fix
     'sort-imports': 'off',
     strict: ['warn', 'global'],
   },
