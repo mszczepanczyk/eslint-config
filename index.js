@@ -1,15 +1,37 @@
 'use strict';
 
-const { isPackageInstalled } = require('./isPackageInstalled');
-
 const config = {
   extends: ['fatfisz'],
-  ignorePatterns: ['build', 'dist', 'coverage'],
-  overrides: [],
+  ignorePatterns: ['build', 'coverage', 'dist', 'out'],
+  overrides: [
+    {
+      files: ['*.js', '*.jsx'],
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off',
+      },
+    },
+    {
+      files: '*.stories.*',
+      rules: {
+        'import/no-default-export': 'off',
+      },
+    },
+    {
+      files: '*.mdx',
+      extends: 'plugin:mdx/overrides',
+    },
+    {
+      files: ['craco.config.ts', 'craco.config.js', '.cracorc.ts', '.cracorc.js', '.cracorc'],
+      env: { node: true },
+    },
+  ],
   plugins: ['json', 'simple-import-sort'],
   rules: {
+    '@typescript-eslint/no-empty-interface': 'off',
+    '@typescript-eslint/no-var-requires': 'warn',
     'import/order': 'off',
     'json/*': ['warn', { allowComments: true }],
+    'jsx-quotes': ['warn', 'prefer-single'],
     'no-unused-vars': 'warn',
     'prettier/prettier': [
       'warn',
@@ -21,63 +43,21 @@ const config = {
         trailingComma: 'all',
       },
     ],
+    'react/display-name': 'warn',
+    'react/jsx-key': 'warn',
     'simple-import-sort/exports': 'warn',
     'simple-import-sort/imports': 'warn',
     'sort-imports': 'off',
   },
 };
 
-if (isPackageInstalled('react')) {
-  Object.assign(config.rules, {
-    'jsx-quotes': ['warn', 'prefer-single'],
-    'react/display-name': 'warn',
-    'react/jsx-key': 'warn',
-  });
-}
+// if (isPackageInstalled('next')) {
+//   config.ignorePatterns.push('out');
 
-if (isPackageInstalled('typescript')) {
-  config.overrides.push({
-    files: ['*.js', '*.jsx'],
-    rules: {
-      '@typescript-eslint/no-var-requires': 'off',
-    },
-  });
-
-  Object.assign(config.rules, {
-    '@typescript-eslint/no-empty-interface': 'off',
-    '@typescript-eslint/no-var-requires': 'warn',
-  });
-}
-
-if (isPackageInstalled('next')) {
-  config.ignorePatterns.push('out');
-
-  Object.assign(config.rules, {
-    'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': 'off',
-  });
-}
-
-if (isPackageInstalled('@storybook/core')) {
-  config.overrides.push(
-    {
-      files: '*.stories.*',
-      rules: {
-        'import/no-default-export': 'off',
-      },
-    },
-    {
-      files: '*.mdx',
-      extends: 'plugin:mdx/overrides',
-    },
-  );
-}
-
-if (isPackageInstalled('@craco/craco')) {
-  config.overrides.push({
-    files: ['craco.config.ts', 'craco.config.js', '.cracorc.ts', '.cracorc.js', '.cracorc'],
-    env: { node: true },
-  });
-}
+//   Object.assign(config.rules, {
+//     'no-unused-vars': 'off',
+//     '@typescript-eslint/no-unused-vars': 'off',
+//   });
+// }
 
 module.exports = config;
