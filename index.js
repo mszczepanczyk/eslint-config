@@ -29,7 +29,7 @@ const config = {
     ecmaVersion: 2020,
   },
   reportUnusedDisableDirectives: true,
-  ignorePatterns: ['build', 'coverage', 'dist', 'out'],
+  ignorePatterns: ['build', 'coverage', 'dist', 'out', '!.storybook'],
   overrides: [
     {
       files: ['.eslintrc.js', 'babel.config.js', 'metro.config.js', 'webpack.config.js'],
