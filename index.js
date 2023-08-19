@@ -33,16 +33,16 @@ const config = {
   overrides: [
     {
       files: ['*.js', '*.ts', '*.tsx'],
-      excludedFiles: ["*/**"],
+      excludedFiles: ['*/**'],
       rules: {
         'import/no-default-export': 'off',
-      }
+      },
     },
     {
       files: ['.*/*.js', '.*/*.ts', '.*/*.tsx'],
       rules: {
         'import/no-default-export': 'off',
-      }
+      },
     },
     {
       files: ['.eslintrc.js', 'babel.config.js', 'metro.config.js', 'webpack.config.js'],
