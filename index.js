@@ -32,6 +32,19 @@ const config = {
   ignorePatterns: ['build', 'coverage', 'dist', 'out', '!.storybook'],
   overrides: [
     {
+      files: ['*.js', '*.ts', '*.tsx'],
+      excludedFiles: ["*/**"],
+      rules: {
+        'import/no-default-export': 'off',
+      }
+    },
+    {
+      files: ['.*/*.js', '.*/*.ts', '.*/*.tsx'],
+      rules: {
+        'import/no-default-export': 'off',
+      }
+    },
+    {
       files: ['.eslintrc.js', 'babel.config.js', 'metro.config.js', 'webpack.config.js'],
       env: { node: true },
     },
@@ -122,7 +135,6 @@ const config = {
     {
       files: 'rollup.config.js',
       parserOptions: { sourceType: 'module' },
-      rules: { 'import/no-default-export': 'off' },
     },
   ],
   rules: {
