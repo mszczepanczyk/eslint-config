@@ -217,20 +217,24 @@ const config = {
         avoidEscape: true,
       },
     ],
-    'react/display-name': 'warn',
-    'react/jsx-curly-brace-presence': ['warn', 'never'],
-    'react/jsx-key': 'warn',
-    'react/jsx-sort-props': 'warn',
-    'react/jsx-uses-react': 'warn',
-    'react/no-children-prop': 'off',
-    'react/prop-types': 'off',
-    'react/self-closing-comp': [
-      'warn',
-      {
-        component: true,
-        html: true,
-      },
-    ],
+    ...(isPackageInstalled('eslint-plugin-react')
+      ? {
+          'react/display-name': 'warn',
+          'react/jsx-curly-brace-presence': ['warn', 'never'],
+          'react/jsx-key': 'warn',
+          'react/jsx-sort-props': 'warn',
+          'react/jsx-uses-react': 'warn',
+          'react/no-children-prop': 'off',
+          'react/prop-types': 'off',
+          'react/self-closing-comp': [
+            'warn',
+            {
+              component: true,
+              html: true,
+            },
+          ],
+        }
+      : {}),
     'simple-import-sort/exports': 'warn',
     'simple-import-sort/imports': 'warn',
     // 'sort-keys': 'warn', https://www.npmjs.com/package/eslint-plugin-sort-keys-fix
