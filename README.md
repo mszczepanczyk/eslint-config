@@ -3,7 +3,7 @@
 ## Installation
 
 ```shell
-yarn add -D @mariusz.sh/eslint-config
+npm install --save-dev @mariusz.sh/eslint-config
 ```
 
 Then in `eslint.config.js`:
