@@ -1,6 +1,6 @@
 {
   "name": "@mariusz.sh/eslint-config",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "main": "index.js",
   "homepage": "https://github.com/mszczepanczyk/eslint-config",
   "repository": "https://github.com/mszczepanczyk/eslint-config.git",
@@ -20,6 +20,7 @@
     "test:watch": "npx chokidar *.js *.json fixtures --initial -c 'npm run test'"
   },
   "dependencies": {
+    "@eslint/compat": "1.2.4",
     "@stylistic/eslint-plugin-js": "2.12.1",
     "@typescript-eslint/eslint-plugin": "8.19.0",
     "@typescript-eslint/parser": "8.19.0",
@@ -34,7 +35,6 @@
     "typescript-eslint": "8.19.0"
   },
   "devDependencies": {
-    "@eslint/compat": "1.2.4",
     "chokidar-cli": "3.0.0",
     "eslint": "9.17.0",
     "prettier": "3.4.2",
